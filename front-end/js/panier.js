@@ -14,6 +14,13 @@ const list = document.querySelector('#article-liste');
             `    
         });
 
+let prix = document.querySelector('#prixtotal');
+console.log(prix);
 
+let prixTotal = 0;
+teddies.forEach(doudou =>{
+    prixTotal = prixTotal + doudou.price;    
+})
+prix.innerHTML += `Total de la commande : <span class="fw-bold text-danger">${prixTotal}€</span>`
         
 

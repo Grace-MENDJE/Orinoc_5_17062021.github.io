@@ -21,7 +21,7 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
                  <div class="input-group mb-3">
                     <label class="input-group-text" for="inputGroupSelect01">Couleurs</label>
                     <select class="form-select" id="inputGroupSelect01">
-                      <option id="choixdelacouleur" class="CouleurduNournour" selected>Choisissez une couleur au choix...</option> 
+                      <!--<option id="choixdelacouleur" class="CouleurduNournour" selected></option>--> 
                     </select>
                 </div>
                  <p class="card-text h4">${doudou.description}</p>
