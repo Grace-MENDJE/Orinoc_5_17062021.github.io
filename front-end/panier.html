@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORINOCO</title>
+    <link rel="stylesheet" href="../back-end/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../back-end/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../back-end/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">Logos</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active h3" aria-current="page" href="index.html">Rayons</a>
+              </li>
+              <li class="nav-item h3">
+                <a class="nav-link active" href="./commande.html">Mon compte</a>
+              </li>
+              <li class="nav-item h3">
+                <a class="nav-link active" href="./panier.html" tabindex="-1" aria-disabled="true">Panier</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">                
+            </div>
+        </div>
+
+        <div class="msg"></div>
+
+        <div class="panier">
+          <table class="table panier-table mt-5">
+            <thead>
+                <tr>                  
+                    <th>Nom de l'article</th>
+                    <th>L'article</th>
+                    <th>Couleur de l'article</th>
+                    <th>Prix de l'<article></article></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="article-liste"></tbody>         
+          </table>
+          <div id="prixtotal" class="text-end col-12"> Total de la commande: </div>
+        </div>
+        <form class="book-form" action="">
+          <div class="from-group">
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" class="form-control" placeholder="Ex: Grâce">
+          </div>
+
+          <div class="from-group">
+              <label for="nom">Nom:</label>
+              <input type="text" id="nom" class="form-control">
+          </div>
+          
+          <div class="from-group">
+              <label for="mail">E-mail:</label>
+              <input type="text" id="mail" class="form-control">
+          </div>
+          <div class="from-group">
+            <label for="adresse">Adresse</label>
+            <input type="text" id="adresse" class="form-control">
+          </div>
+          <div class="from-group">
+            <label for="ville">Ville</label>
+            <input type="text" id="ville" class="form-control ">
+          </div>
+          <input type="submit" value="Confirmez votre commande" class="btn btn-danger btn-block mt-3">            
+      </form>
+    </div>
+
+    
+
+ 
+
+    
+   
+      <!-- <script src="./js/panier.js"></script> -->
+      <script src="./js/panier.js"></script>
+      <script src="./js/form.js"></script>
+</body>
+</html>

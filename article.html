@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'article</title>
+    <link rel="stylesheet" href="./front-end/CSS/style.css">
+    <link rel="stylesheet" href="../back-end/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../back-end/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../back-end/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="card mb-10" >
+        <div class="row g-0">
+        <div class="col-md-6" id ="">
+        <img src="" class="img-fluid rounded-start" alt="Phote de nournours">
+        </div>
+          <div class="col-md-6">
+             <div class="card-body">
+              <h3 id="card-title" class="card-title"></h3>
+              <div class="input-group mb-3">
+                 <label class="input-group-text" for="inputGroupSelect01">Couleurs</label>
+                 <select class="form-select" id="inputGroupSelect01">
+                   <option id="choixdelacouleur" class="CouleurduNournour" selected>Choisissez une couleur au choix...</option>
+                   <option value="1"></option>
+                   <option value="2"></option>
+                   <option value="3"></option>
+                 </select>
+             </div>
+              <p id="card-description" class="card-text h4"></p>
+              <p id="card-price" class="card-text text-danger h3"> €</p>
+              <button class="btn btn__panier btn-danger " type="submit">Ajouter au panier</button>
+            </div>
+          </div>
+        </div>
+     </div> 
+
+
+
+    <script src="./front-end/js/article.js"></script>
+</body>
+</html>
+
+
+
+
