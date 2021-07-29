@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORINOCO</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="../back-end/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="../back-end/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../back-end/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../back-end/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>    
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
@@ -36,12 +37,12 @@
             </form>
           </div>
         </div>
-    </nav>
-        <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-8">                
-            </div>
+      </nav>
+      <div class="row">
+        <div class="col-lg-4"></div>
+          <div class="col-lg-8">                
         </div>
+      </div>
 
         <div class="msg"></div>
 
@@ -59,33 +60,122 @@
             <tbody id="article-liste"></tbody>         
           </table>
           <div id="prixtotal" class="text-end col-12 "> </div>
-        </div>
-        <form class="book-form" action="">
+
+
+
+          <div class="form-body">
+            <div class="contenu">
+              <div class="header">
+                  <h2>Create Account</h2>
+              </div>
+              
+              <form action="" class="form" id="form">
+                  <div class="form-control">
+                      <label for="">Firstname:</label>
+                      <input type="text" placeholder="Grâce" id="firstname">
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>error message</small>
+                  </div>
+
+                  <div class="form-control">
+                    <label for="">Lastname:</label>
+                    <input type="text" placeholder="MENDJE" id="lastname">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>error message</small>
+                </div>
+                  
+                  <div class="form-control">
+                      <label for="">Email</label>
+                      <input type="email" placeholder="Grace@gmail.com" id="email">
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error message</small>
+                  </div>
+          
+                  <div class="form-control">
+                      <label for="">Adress:</label>
+                      <input type="text" placeholder="Ex: 8, andréé agourge" id="adress">
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error message</small>
+                  </div>
+          
+                  <div class="form-control">
+                      <label for="">City</label>
+                      <input type="text" placeholder=" Grenoble" id="city">
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error message</small>
+                  </div>
+          
+              
+                  <button id="commande" type="submit" value="Confirmez votre commande" class="btn btn-danger btn-block mt-3"> Passer la commande</button>
+              </form>
+      
+            </div>  
+          </div>
+    </div>
+
+
+        
+
+
+        <!-- <form class="book-form" action="">          
           <div class="from-group">
+            <div><h3>Pour finaliser votre commande, Veuillez nous indiquer les informations </h1></div>
+            <div class="msg"></div>
             <label for="prenom">Prénom:</label>
             <input type="text" id="prenom" class="form-control" placeholder="Ex: Grâce">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Veuillez entrer votre prénom</small>
           </div>
 
           <div class="from-group">
+            <div class="msg"></div>
               <label for="nom">Nom:</label>
               <input type="text" id="nom" class="form-control">
+              <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Veuillez entrer votre nom</small>
           </div>
           
           <div class="from-group">
+            <div class="msg"></div>
               <label for="mail">E-mail:</label>
-              <input type="text" id="mail" class="form-control">
+              <input type="email" id="mail" class="form-control">
+              <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Veuillez entrer votre mail correctement</small>
           </div>
           <div class="from-group">
+            <div class="msg"></div>
             <label for="adresse">Adresse</label>
             <input type="text" id="adresse" class="form-control">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Veuillez entrer votre adresse</small>
           </div>
           <div class="from-group">
+            <div class="msg"></div>
             <label for="ville">Ville</label>
             <input type="text" id="ville" class="form-control ">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Veuillez entrer le nom de la ville</small>
           </div>
-          <input type="submit" value="Confirmez votre commande" class="btn btn-danger btn-block mt-3">            
-      </form>
+          <input id="commande" type="submit" value="Confirmez votre commande" class="btn btn-danger btn-block mt-3">            
+      </form> -->
     </div>
+
+    <div class="container">
+      <input type="button" onclick="decrementValue()" value="-" />
+      <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+      <input type="button" onclick="incrementValue()" value="+" />
+      </div>
+      
 
     
 
@@ -93,8 +183,8 @@
 
     
    
-      <!-- <script src="./js/panier.js"></script> -->
       <script src="./js/panier.js"></script>
       <script src="./js/form.js"></script>
+      <!-- <script src="./js/remove.js"></script> -->
 </body>
 </html>

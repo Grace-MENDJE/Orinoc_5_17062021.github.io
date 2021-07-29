@@ -26,7 +26,7 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
                 </div>
                  <p class="card-text h4">${doudou.description}</p>
                  <p class="card-text text-danger h3">${doudou.price / 100} €</p>
-                 <a href="../../panier.html" class="btn btn-danger panier" role="button">Ajouter au panier</a>
+                 <a href="../../front-end/panier.html" class="btn btn-danger panier" role="button">Ajouter au panier</a>
                </div>
              </div>
            </div>
