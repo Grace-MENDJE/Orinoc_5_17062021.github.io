@@ -74,31 +74,7 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
     });
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  const teddies = JSON.parse(localStorage.getItem("teddies"));
+const teddies = JSON.parse(localStorage.getItem("teddies"));
 console.log(teddies);
 
 const list = document.querySelector("#article-liste");
@@ -118,24 +94,24 @@ teddies.forEach((teddy) => {
 let prix = document.querySelector("#prixtotal");
 // console.log(prix);
 
-function AccrementationPrix(){
+function AccrementationPrix() {
   let prixTotal = 0;
   teddies.forEach((doudou) => {
-  prixTotal = prixTotal + doudou.price;
-});
-prix.innerHTML += `Total de la commande : <span class="fw-bold text-danger">${prixTotal}€</span>`;
+    prixTotal = prixTotal + doudou.price;
+  });
+  prix.innerHTML += `Total de la commande : <span class="fw-bold text-danger">${prixTotal}€</span>`;
 }
 AccrementationPrix();
 
-function DecrementationPrix(){
+function DecrementationPrix() {
   let prixTotal = 0;
   teddies.forEach((doudou) => {
-  prixTotal = prixTotal + doudou.price;
-  let resultat = prixTotal;
-  resultat = resultat - doudou.price;
-  console.log(resultat);
-});  
-prix.innerHTML += `Total de la commande : <span class="fw-bold text-danger">${resultat}€</span>`;
+    prixTotal = prixTotal + doudou.price;
+    let resultat = prixTotal;
+    resultat = resultat - doudou.price;
+    console.log(resultat);
+  });
+  prix.innerHTML += `Total de la commande : <span class="fw-bold text-danger">${resultat}€</span>`;
 }
 //Pour supprimer l'article sur l'interface
 let effacer = document.querySelectorAll(".delete");
@@ -147,8 +123,7 @@ for (let l = 0; l < effacer.length; l++) {
     let suppressionDuProduit = teddies[l].image;
     // console.log(suppressionDuProduit);
     if (suppressionDuProduit != null) {
-      DecrementationPrix();         
+      DecrementationPrix();
     }
-    
   });
 }

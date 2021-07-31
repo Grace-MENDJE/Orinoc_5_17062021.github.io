@@ -15,14 +15,21 @@ teddies.forEach((teddy) => {
 });
 
 // Pour calculer la somme des prix
-let prix = document.querySelector("#prixtotal");
-// console.log(prix);
+function somme() {
+  let prixTotal = 0;
+  teddies.forEach((doudou) => {
+    prixTotal = prixTotal + doudou.price;
+  });
+  let prix = document.querySelector("#prixtotal");
+  // console.log(prix);
+  prix.innerHTML += `Total de la commande : <span class="fw-bold text-danger">${prixTotal}€</span>`;
+}
+somme();
 
-let prixTotal = 0;
-teddies.forEach((doudou) => {
-  prixTotal = prixTotal + doudou.price;
-});
-prix.innerHTML += `Total de la commande : <span class="fw-bold text-danger">${prixTotal}€</span>`;
+// let prixTotal = 0;
+// teddies.forEach((doudou) => {
+//   prixTotal = prixTotal + doudou.price;
+// });
 
 //Pour supprimer l'article sur l'interface
 let effacer = document.querySelectorAll(".delete");
@@ -30,18 +37,34 @@ let effacer = document.querySelectorAll(".delete");
 for (let l = 0; l < effacer.length; l++) {
   effacer[l].addEventListener("click", (event) => {
     event.preventDefault();
-    console.log(event.target.parentNode.parentNode);
-    //Selection de l'image du produit qui va nous permettre de supprimer le produit en cliquant sur le bouton.
-
+    // console.log(event.target.parentNode.parentNode);
     event.target.parentNode.parentNode.remove();
     //   alert('voulez-vous vraiment supprimer ce Produit ?')
     //Pour elenver le pris du produits ajouter
 
-    teddies.forEach((teddy) => {
-      resultat = prixTotal - teddy.price;
-      console.log("coooooooooooooooooooooooool" + "" + "" + resultat);
-    });
-    prix.innerHTML = `Total de la commande : <span class="fw-bold text-danger">${resultat}€</span>`;
+    function prixReduit() {
+      teddies.forEach((teddy, index) => {
+        if (teddy.title === teddy.title && teddy.color === teddy.color) {
+          teddies.splice(index, 1);
+          //Pour supprimer dans le localStorage
+          localStorage.setItem("teddies", JSON.stringify(teddies));
+          window.location.reload();
+        }
+      });
+    }
+    prixReduit();
+    // teddies.forEach((teddy, index) => {
+    //   if (teddy.title === teddy.title || teddy.color === teddy.color) {
+    //     teddies.splice(index, 1);
+    //     prixTotal = teddy.price;
+    //   }
+    // });
+
+    // teddies.forEach((teddy) => {
+    //   resultat = prixTotal - teddy.price;
+    //   console.log("coooooooooooooooooooooooool" + "" + "" + resultat);
+    // });
+    // prix.innerHTML = `Total de la commande : <span class="fw-bold text-danger">${resultat}€</span>`;
   });
 }
 

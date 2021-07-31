@@ -37,8 +37,6 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
       couleur.innerHTML += `<option value="${color}">${color}</option>`;
     });
 
-   
-
     let erreur = document.getElementsByClassName("erreur");
     console.log(erreur);
     let couleurArticle = document.getElementsByClassName("couleurduproduit");
@@ -50,15 +48,16 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
       e.preventDefault();
       let couleur = document.querySelector("select");
       let couleurArticle = couleur.value;
-      //storageElement : me permettra de sauvegarder tout les élément sous tableau 
-      
+      //storageElement : me permettra de sauvegarder tout les élément sous tableau
+
       let storageElement = JSON.parse(localStorage.getItem("teddies"));
-      if(storageElement=== null){
+      if (storageElement === null) {
         storageElement = [];
       }
       console.log(storageElement);
 
       const teddies = {
+        id: doudou._id,
         image: doudou.imageUrl,
         title: doudou.name,
         color: couleurArticle,
@@ -68,10 +67,5 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
       //Pour rajouter teddies dans notre back up ou reserve de nos élémént
       storageElement.push(teddies);
       localStorage.setItem("teddies", JSON.stringify(storageElement));
-      
     });
-
-    
   });
-
- 
